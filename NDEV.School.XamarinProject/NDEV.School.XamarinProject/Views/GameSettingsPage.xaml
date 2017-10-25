@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NDEV.School.XamarinProject.Views.GameSettingsPage"
+             xmlns:NDEV="clr-namespace:NDEV.MasterClasses.Xamarin.Forms;assembly=NDEV.MasterClasses.Xamarin.Forms">
+    <ContentPage.Content>
+        <NDEV:MyXamarinGrid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="6*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+
+            <NDEV:MyXamarinLabel Text="Map type select:" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" />
+            <NDEV:MyXamarinTwoOptionRadioButton x:Name="radioButtonMapSelecter" Button1Text="Premade Map" Button2Text="Random"
+                                                Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" />
+            <NDEV:MyXamarinButton Text="Check\r\npremade map!" x:Name="buttonPremadeMapChecker" BackgroundColor="LightYellow"
+                                  Clicked="buttonPremadeMapChecker_Clicked" Grid.Row="1" Grid.Column="2" />
+
+            <NDEV:MyXamarinLabel Text="Number of players:" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" />
+            <NDEV:MyXamarinTwoOptionRadioButton x:Name="radioButtonPlayerSelecter" Button1Text="3" Button2Text="4"
+                                                Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" />
+
+            <NDEV:MyXamarinLabel Text="Set the players:" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" />
+            <NDEV:MyXamarinGrid x:Name="gridPlayers" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="4*" />
+                    <ColumnDefinition Width="3*" />
+                </Grid.ColumnDefinitions>
+
+                <NDEV:MyXamarinLabel x:Name="radioButtonPlayerNameLabel1" Text="Player 1" Grid.Row="0" Grid.Column="0" />
+                <NDEV:MyXamarinLabel x:Name="radioButtonPlayerNameLabel2" Text="Player 2" Grid.Row="1" Grid.Column="0" />
+                <NDEV:MyXamarinLabel x:Name="radioButtonPlayerNameLabel3" Text="Player 3" Grid.Row="2" Grid.Column="0" />
+                <NDEV:MyXamarinLabel x:Name="radioButtonPlayerNameLabel4" Text="Player 4" Grid.Row="3" Grid.Column="0" />
+
+                <NDEV:MyXamarinTwoOptionRadioButton x:Name="radioButtonPlayerType1" Button1Text="Human" Button2Text="CPU"
+                                                Grid.Row="0" Grid.Column="1" />
+                <NDEV:MyXamarinTwoOptionRadioButton x:Name="radioButtonPlayerType2" Button1Text="Human" Button2Text="CPU"
+                                                Grid.Row="1" Grid.Column="1" />
+                <NDEV:MyXamarinTwoOptionRadioButton x:Name="radioButtonPlayerType3" Button1Text="Human" Button2Text="CPU"
+                                                Grid.Row="2" Grid.Column="1" />
+                <NDEV:MyXamarinTwoOptionRadioButton x:Name="radioButtonPlayerType4" Button1Text="Human" Button2Text="CPU"
+                                                Grid.Row="3" Grid.Column="1" />
+
+                <NDEV:MyXamarinEntry x:Name="radioButtonPlayerNameEntry1" Placeholder="Enter name!" Grid.Row="0" Grid.Column="2" />
+                <NDEV:MyXamarinEntry x:Name="radioButtonPlayerNameEntry2" Placeholder="Enter name!" Grid.Row="1" Grid.Column="2" />
+                <NDEV:MyXamarinEntry x:Name="radioButtonPlayerNameEntry3" Placeholder="Enter name!" Grid.Row="2" Grid.Column="2" />
+                <NDEV:MyXamarinEntry x:Name="radioButtonPlayerNameEntry4" Placeholder="Enter name!" Grid.Row="3" Grid.Column="2" />
+
+                <NDEV:MyXamarinGrid x:Name="radioButtonPlayer4PlaceHolder" IsVisible="False" BackgroundColor="LightGray"
+                                    Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" />
+            </NDEV:MyXamarinGrid>
+        </NDEV:MyXamarinGrid>
+    </ContentPage.Content>
+</ContentPage>
